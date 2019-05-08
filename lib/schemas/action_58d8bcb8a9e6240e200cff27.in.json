@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "latitude": {
+            "type": "string"
+        },
+        "longitude": {
+            "type": "string"
+        },
+        "maxDistanceInKm": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "string"
+        }
+    }
+}

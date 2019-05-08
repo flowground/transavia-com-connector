@@ -1,0 +1,127 @@
+{
+    "title": "Airports API v2",
+    "description": "Returns all airports",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/transavia.com/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.transavia.com/v2/airports",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "apiKeyHeader": {
+                "label": "apikey (apiKeyHeader)",
+                "viewClass": "TextFieldView"
+            },
+            "apiKeyQuery": {
+                "label": "subscription-key (apiKeyQuery)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "action_58d8bcb7a9e6240e200cff24": {
+            "main": "./lib/actions/action_58d8bcb7a9e6240e200cff24.js",
+            "title": "All airports",
+            "description": "Retrieve all airports.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action_58d8bcb7a9e6240e200cff24.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action_58d8bcb8a9e6240e200cff26": {
+            "main": "./lib/actions/action_58d8bcb8a9e6240e200cff26.js",
+            "title": "Airport(s) by country code.",
+            "description": "Retrieve airports by country code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action_58d8bcb8a9e6240e200cff26.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action_58d8bcb8a9e6240e200cff27": {
+            "main": "./lib/actions/action_58d8bcb8a9e6240e200cff27.js",
+            "title": "Nearest airport(s) by geo coordinates.",
+            "description": "Retrieve nearest airports by geo coordinates (latitude/longitude).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action_58d8bcb8a9e6240e200cff27.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action_58d8bcb8a9e6240e200cff28": {
+            "main": "./lib/actions/action_58d8bcb8a9e6240e200cff28.js",
+            "title": "Nearest airport(s) by airport id.",
+            "description": "Retrieve nearest airports by station id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action_58d8bcb8a9e6240e200cff28.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action_58d8bcb7a9e6240e200cff25": {
+            "main": "./lib/actions/action_58d8bcb7a9e6240e200cff25.js",
+            "title": "Airport by id.",
+            "description": "Retrieve airport by id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action_58d8bcb7a9e6240e200cff25.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
